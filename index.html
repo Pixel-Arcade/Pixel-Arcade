@@ -1042,6 +1042,12 @@ FREE RETRO GAMES • INDIE ADVENTURES • PIXEL STORIES
 
 <script>
 
+if ('serviceWorker' in navigator) {
+ navigator.serviceWorker.register('./sw.js')
+   .then(() => console.log('Service Worker Registered'));
+}
+
+
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove',(e)=>{
